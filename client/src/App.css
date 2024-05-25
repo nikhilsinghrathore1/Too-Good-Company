@@ -1,42 +1,42 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+@font-face {
+               font-family: f1;
+               src: url("/public/AtypDisplay-Regular.ttf");
+}
+@font-face {
+               font-family: f2;
+               src: url("/public/AtypDisplay-Thin.ttf");
+}
+@font-face {
+               font-family: f3;
+               src: url("/public/SuisseIntl-Ultralight.ttf");
+}
+@font-face {
+               font-family: f4;
+               src: url("/public/SuisseIntl-Book.ttf");
+}
+@font-face {
+               font-family: f5;
+               src: url("/public/SuisseIntl-Light.ttf");
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
+.font1{
+               font-family: f1;
 }
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+.font2{
+               font-family: f2;
 }
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+.font3{
+               font-family: f3;
 }
-
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.font4{
+               font-family: f4;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+.font5{
+               font-family: f5;
 }
-
-.card {
-  padding: 2em;
+.stretch{
+               font-stretch: expanded;
 }
-
-.read-the-docs {
-  color: #888;
+.transi{
+               transition: all 1s ease-in-out;
 }
