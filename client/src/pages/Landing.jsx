@@ -4,7 +4,7 @@ import "../App.css"
 const Landing = () => {
   return (
     <div id="main">
-      <div class="hero max-w-screen-2xl h-screen bg-[#151519] text-white relative">
+      <div class="hero max-w-screen-2xl h-[110vh] bg-[#151519] text-white relative">
         <div class="navbar w-full px-7 pt-4 text-white flex items-center justify-between">
           <div class="flex gap-8 items-center ">
             <div>
@@ -37,13 +37,13 @@ const Landing = () => {
           {/* this is for the absolute images section */}
 
           <div>
-            <img className="w-52 h-32 object-cover absolute -top-1 left-[34%] z-10" src="https://selemen.liqium.com/img/m2.jpg" alt="not showing" />
+            {/* <img className="w-52 h-32 object-cover absolute -top-1 left-[34%] z-10" src="https://selemen.liqium.com/img/m2.jpg" alt="not showing" />
             <img className="w-80 h-56 object-cover absolute top-[41%] z-[3] left-[22.6%]" src="https://selemen.liqium.com/img/m1.jpg" alt="not showing" />
-            <img className="w-56 h-[330px] object-cover absolute top-[30%] z-[1] left-[37.6%]" src="https://selemen.liqium.com/img/m3.jpg" alt="not showing" />
+            <img className="w-56 h-[330px] object-cover absolute top-[30%] z-[1] left-[39.6%]" src="https://selemen.liqium.com/img/m3.jpg" alt="not showing" />
             <img className="w-80 h-[180px] object-cover absolute top-[81%] z-[2] left-[42.6%]" src="https://selemen.liqium.com/img/m4.jpg" alt="not showing" />
             <img className="w-80 h-[198px] object-cover absolute top-[1.5%] z-[2] left-[51.6%]" src="https://selemen.liqium.com/img/m5.jpg" alt="not showing" />
-            <img className="w-80 h-[188px] object-top object-cover absolute top-[40%] z-[0] left-[51.6%]" src="https://selemen.liqium.com/img/m7.jpg" alt="not showing" />
-            <img className="w-[300px] h-[188px] object-top object-cover absolute top-[74%] z-[14] left-[55.6%]" src="https://selemen.liqium.com/img/m6.jpg" alt="not showing" />
+            <img className="w-80 h-[188px] object-left object-cover absolute top-[40%] z-[0] left-[51.6%]" src="https://selemen.liqium.com/img/m7.jpg" alt="not showing" />
+            <img className="w-[300px] h-[188px] object-top object-cover absolute top-[74%] z-[14] left-[55.6%]" src="https://selemen.liqium.com/img/m6.jpg" alt="not showing" /> */}
           </div>
 
 
@@ -51,11 +51,22 @@ const Landing = () => {
 
         </div>
 
-          <div className="w-full flex justify-center text-white absolute bottom-7  ">
-            
-            <p className="font2 text-[13px] tracking-wide opacity-55 ">Nikochan</p>
-          
+          <div className="w-full h-[38vh] absolute bottom-2 px-4 ">
+            <div className="absolute top-[63%] left-[50%] -translate-x-1/2">
+              <p className="font2 tracking-wider text-[14px] opacity-60">NikoChan</p>
+            </div>
+
+            <div className="w-full h-full flex px-2  border-b-[1px] border-white/50">
+                  <div className="w-[50%] pb-1 font2 opacity-60 text-[14px] border-r-[1px] border-white/50 h-full flex items-end ">
+                    <p>&copy; 2024</p>
+                  </div>
+                  <div className="w-[50%] h-full pb-1 opacity-60 text-[14px] font2 items-end justify-end flex ">
+                    <p>Suchi-San</p>
+                  </div>
+            </div>
           </div>
+
+
 
 
 
