@@ -18,6 +18,14 @@
                font-family: f5;
                src: url("/public/SuisseIntl-Light.ttf");
 }
+@font-face {
+               font-family: f6;
+               src: url("/public/SuisseIntl-Medium.ttf");
+}
+@font-face {
+               font-family: f7;
+               src: url("/public/SuisseIntl-Regular.ttf");
+}
 
 .font1{
                font-family: f1;
@@ -34,9 +42,21 @@
 .font5{
                font-family: f5;
 }
+.font6{
+               font-family: f6;
+}
+.font7{
+               font-family: f7;
+}
 .stretch{
                font-stretch: expanded;
 }
 .transi{
                transition: all 1s ease-in-out;
+}
+.box{
+               clip-path: polygon(0 0 , 100% 0 , 100% 100% , 0 100%);
+}
+.tran{
+               transition: all 0.3s ease-in-out;
 }

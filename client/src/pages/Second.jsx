@@ -28,7 +28,7 @@ const Second = () => {
         </div>
 
 
-        <div className='w-full h-[180vh] flex border-b-[1px] border-white/30 '>
+        <div className='w-full h-[190vh] flex border-b-[1px] border-white/30 '>
           <div className='w-1/2 h-full  border-r-[1px] border-white/20 flex flex-col items-center '>
 
           <h1 className='font1 text-[15px] opacity-65 mt-5'>01</h1>
@@ -39,11 +39,11 @@ const Second = () => {
           </div>
 
         
-      <div className='w-full flex items-start  h-[70%]'>
-          <div className='relative w-[90%] h-full mt-40'>
+      <div className='w-full flex items-start  h-[65%]'>
+          <div className='relative w-[88%] h-full mt-40'>
             <img className='h-full w-full object-cover z-0 absolute top-0 left-0' src="https://selemen.liqium.com/img/j2.jpg" alt="not showing" />
             <div className='w-full h-full flex items-center flex-col gap-16 justify-center relative bg-black/20 z-10'>
-              <div className='text-center leading-[45px]'>
+              <div className='text-center leading-[42px]'>
                 <p className='font3 font-bold text-[2rem]'>Commercial</p>
                 <p className='font1 text-[5rem] '>Designs</p>
               </div>
@@ -62,7 +62,7 @@ const Second = () => {
 </div>
 
 
-<div className='w-full flex items-center justify-center h-[50%] mt-[240px]'>
+<div className='w-full flex items-center justify-center h-[45%] mt-[240px]'>
 <div className='relative w-[55%] h-full mt-40'>
   <img className='h-full w-full object-cover z-0 absolute top-0 left-0' src="https://selemen.liqium.com/img/j3.jpg" alt="not showing" />
   <div className='w-full h-full flex items-center flex-col gap-8 justify-center relative bg-black/50 z-10'>

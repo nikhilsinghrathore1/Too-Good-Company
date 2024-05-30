@@ -37,13 +37,13 @@ const Landing = () => {
           {/* this is for the absolute images section */}
 
           <div>
-            {/* <img className="w-52 h-32 object-cover absolute -top-1 left-[34%] z-10" src="https://selemen.liqium.com/img/m2.jpg" alt="not showing" />
+            <img className="w-52 h-32 object-cover absolute -top-1 left-[34%] z-10" src="https://selemen.liqium.com/img/m2.jpg" alt="not showing" />
             <img className="w-80 h-56 object-cover absolute top-[41%] z-[3] left-[22.6%]" src="https://selemen.liqium.com/img/m1.jpg" alt="not showing" />
             <img className="w-56 h-[330px] object-cover absolute top-[30%] z-[1] left-[39.6%]" src="https://selemen.liqium.com/img/m3.jpg" alt="not showing" />
             <img className="w-80 h-[180px] object-cover absolute top-[81%] z-[2] left-[42.6%]" src="https://selemen.liqium.com/img/m4.jpg" alt="not showing" />
             <img className="w-80 h-[198px] object-cover absolute top-[1.5%] z-[2] left-[51.6%]" src="https://selemen.liqium.com/img/m5.jpg" alt="not showing" />
             <img className="w-80 h-[188px] object-left object-cover absolute top-[40%] z-[0] left-[51.6%]" src="https://selemen.liqium.com/img/m7.jpg" alt="not showing" />
-            <img className="w-[300px] h-[188px] object-top object-cover absolute top-[74%] z-[14] left-[55.6%]" src="https://selemen.liqium.com/img/m6.jpg" alt="not showing" /> */}
+            <img className="w-[300px] h-[188px] object-top object-cover absolute top-[74%] z-[14] left-[55.6%]" src="https://selemen.liqium.com/img/m6.jpg" alt="not showing" />
           </div>
 
 
