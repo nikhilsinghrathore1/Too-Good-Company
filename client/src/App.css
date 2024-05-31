@@ -34,6 +34,22 @@
                font-family: f9;
                src: url("/public/Gilroy-Bold.ttf");
 }
+@font-face {
+               font-family: f10;
+               src: url("/public/ABCSocialMono-Regular.ttf");
+}
+@font-face {
+               font-family: f11;
+               src: url("/public/HelveticaNowText-Regular.ttf");
+}
+@font-face {
+               font-family: f12;
+               src: url("/public/Futura-Bold.ttf");
+}
+@font-face {
+               font-family: f13;
+               src: url("/public/abc-social-mono-regular-woff-2-a87e92.ttf");
+}
 
 .font1{
                font-family: f1;
@@ -55,6 +71,18 @@
 }
 .font7{
                font-family: f7;
+}
+.font8{
+               font-family: f10;
+}
+.font9{
+               font-family: f11;
+}
+.font10{
+               font-family: f12;
+}
+.font11{
+               font-family: f13;
 }
 .gilb{
                font-family: f9;
