@@ -2,30 +2,27 @@ import { useState } from 'react'
 import reactLogo from './assets/react.svg'
 import viteLogo from '/vite.svg'
 import './App.css'
-import Landing from './pages/Landing'
-import Second from './pages/Second'
-import Third from './pages/Third'
-import Fourth from './pages/Fourth'
-import Fifth from './pages/Fifth'
-import Sixth from './pages/Sixth'
-import Seventh from './pages/Seventh'
-import Eighth from './pages/Eighth'
-import Footer from './pages/Footer'
+import EnterancePage from './pages/EnterancePage'
+import { BrowserRouter, Route, Routes } from 'react-router-dom'
+import Register from './pages/Register'
+import Login from './pages/Login'
+import Home from './pages/Home'
+
 
 function App() {
   const [count, setCount] = useState(0)
 
   return (
     <>
-      <Landing/>
-      <Second/>
-      <Third/>
-      <Fourth/>
-      <Fifth/>
-      <Sixth/>
-      <Seventh/>
-      <Eighth/>
-      <Footer/>
+     <BrowserRouter>
+     <Routes>
+      {/* <Route path='/' element ={<Register/>} /> */}
+      <Route path='/register' element ={<Register/>} />
+      <Route path='/login' element ={<Login/>} />
+      <Route path='/home' element ={<Home/>} />
+
+     </Routes>
+     </BrowserRouter>
     </>
   )
 }
