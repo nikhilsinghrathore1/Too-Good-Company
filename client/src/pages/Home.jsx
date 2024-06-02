@@ -1,10 +1,12 @@
 import axios from 'axios'
 import React, { useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useRecoilValue } from 'recoil'
 import Footer from '../components/Footer'
 import Hero from '../components/Hero'
 import MainProduct from '../components/MainProduct'
 import ProductsPage from '../components/ProductsPage'
+import { LandingAtom } from '../Store/Atom'
 
 const Home = () => {
               //  const navigate = useNavigate()
@@ -30,6 +32,8 @@ const Home = () => {
               //                 }
                  
               //  }, [])
+
+
                
   return (
     <div className='w-full bg-[#F7F7F7]' >

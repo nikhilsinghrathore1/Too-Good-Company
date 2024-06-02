@@ -2,13 +2,16 @@ const express = require("express")
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
 const app = express();
-
+const StoreRouter = require("./Routes/StoreRouter")
+const verifyToken = require("./Middlewares/jwtValidation")
 const userModel = require("./Model/User")
 app.use(express.json())
 app.use(cors())
+app.use("/home/store", StoreRouter)
 
 // need to implement the zod validation for the enterance routes
 
+// this toh is the authentication wale routes so lets move it to the auth Router or lets just let it stay here only 
 
 // this is the register route
 app.post("/register",async(req,res)=>{
@@ -63,23 +66,6 @@ app.post("/home",verifyToken, (req,res)=>{
                res.status(200).send("recieved token")
 })
 
-function verifyToken(req,res,next){
-               const token = req.headers['authorization'].split(" ")[1]
-               if(!token){
-                              res.status(400).json({msg:"invalid token"})
-               }
-               else{
-                              jwt.verify(token , "123" , (err ,decode)=>{
-                                             if(err){
-                                                            res.status(400).json({msg:"wrong credentials"})
-                                             }
-                                             else{
-                                                            req.user = decode;
-                                                         next()
-                                             }
-                              })
-               }
-}
 
 
 app.listen(3000)

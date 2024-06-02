@@ -1,19 +1,20 @@
 import React from 'react'
 import { IoIosArrowForward } from "react-icons/io";
 
-const HeroProduct = () => {
+const HeroProduct = ({data}) => {
+  // console.log(data.Insideimages[0])
   return (
     <div className='w-[32.4%] h-full relative shadow-xl overflow-hidden '>
-      <img className=' w-full h-full object-cover' src="https://cdn.sanity.io/images/w8f1ak3c/production/138e191deead80c5c8e9a982c20987f8f83c1f27-5504x8256.jpg/JTG_2919%20copy.jpg?rect=276,0,4952,8256&w=640&h=1067&fit=min&auto=format" alt="not showing" />
+      <img className=' w-full h-full object-cover' src={data.mainImg} alt="not showing" />
 
       {/* internal div */}
       <div className='absolute top-0 w-full h-full  flex justify-center pt-72'>
 
-      <div className=' relative z-10 w-64 h-12 overflow-hidden hover:h-56 tran origin-center bottom-0 pt-4 bg-[#EDF3FF] rounded-3xl'>
+      <div className={` relative z-20 w-[275px] h-12 overflow-hidden hover:h-56 bg-[${data.color}] tran1 origin-center bottom-0 pt-4  rounded-3xl`}>
                 <div className='top px-7 w-full flex justify-between items-center'>
                   <div className='w-2 h-2 bg-black rounded-full'></div>
                   <p className='font9 uppercase text-[11px]'>shop</p>
-                  <p className='font9 uppercase text-[11px] font-bold tracking-wide'>pantry</p>
+                  <p className='font9 uppercase text-[11px] font-bold tracking-wide'>{data.text}</p>
                   <div>
                   <IoIosArrowForward className='text-[10px]'/>
                   </div>
@@ -22,15 +23,15 @@ const HeroProduct = () => {
                 <div className='flex w-full h-[90%] '>
 
                   <div className='w-1/2 h-full flex flex-col  pt-5 items-center '>
-                    <img className='flex-shrink-0 w-20 h-28 object-cover mb-4' src="https://cdn.sanity.io/images/w8f1ak3c/production/67981d5df16a3773320a12b140c52689e532c068-2000x2000.png/GreyRust.png?w=1024&h=1024&auto=format" alt="not showing"/>
-                    <p className='font9 leading-none uppercase text-[10.5px]  '>change the course</p>
-                    <p className='font9 uppercase text-[10.5px]  '>cookbook</p>
+                    <img className='flex-shrink-0 w-20 h-28 object-cover mb-4' src={data.Insideimages[0]} alt="not showing"/>
+                    <p className='font9 leading-none uppercase text-[10.5px]  '>{data.Insidetext[0]}</p>
+                    <p className='font9 uppercase text-[10.5px]  '>{data.Insidetext[1]}</p>
                   </div>
 
                   <div className='w-1/2 h-full flex flex-col  pt-5 items-center '>
-                    <img className='w-20 h-28 flex-shrink-0 object-cover mb-4' src="https://cdn.sanity.io/images/w8f1ak3c/production/51bed63763d7dd75a8a04a6452d5806f71b43a67-2000x2000.png/WhiteLilac.png?w=1024&h=1024&auto=format" alt="not showing"/>
-                    <p className='font9 leading-none uppercase text-[10.5px]  '>change the course</p>
-                    <p className='font9 uppercase text-[10.5px]  '>Cook kitt</p>
+                    <img className='w-20 h-28 flex-shrink-0 object-cover mb-4' src={data.Insideimages[1]} alt="not showing"/>
+                    <p className='font9 leading-none uppercase text-[10.5px]  '>{data.Insidetext[2]}</p>
+                    <p className='font9 uppercase text-[10.5px]  '>{data.Insidetext[3]}</p>
                   </div>
 
 

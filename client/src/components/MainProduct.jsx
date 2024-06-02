@@ -1,13 +1,20 @@
 import React from 'react'
+import { useRecoilValue } from 'recoil';
+import { LandingAtom } from '../Store/Atom';
 import HeroProduct from './HeroProduct'
 
 const MainProduct = () => {
+
+  
+  const landingdata = useRecoilValue(LandingAtom)
+  let arr  = landingdata.mainProducts;
+
   return (
     <div className='w-full h-[160vh] px-6'>
                <div className='w-full h-[103vh] flex justify-between pt-3'>
-                              <HeroProduct/>
-                              <HeroProduct/>
-                              <HeroProduct/>
+                          {arr.map((e,i)=>(
+                            <HeroProduct key= {i} data = {e}/>
+                          ))}
                </div>
 
                <div className='w-full h-[57vh] flex justify-between pt-16'>

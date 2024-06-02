@@ -102,3 +102,6 @@
 .tran{
                transition: all 0.3s ease-in-out;
 }
+.tran1{
+               transition:   0.6s cubic-bezier(0.16, 1, 0.3, 1);
+}
