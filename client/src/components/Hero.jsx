@@ -4,7 +4,7 @@ import { FiShoppingCart } from "react-icons/fi";
 
 const Hero = () => {
   return (
-    <div className='w-full h-[235vh] bg-[#F7F7F7] pt-[22px] pr-[0px] overflow-hidden border-b-[1px] border-black/50 pl-[19px] relative text-black'>
+    <div className='w-full h-[235vh]  pt-[22px] pr-[0px] overflow-hidden  pl-[19px] relative text-black'>
                <nav className='flex items-start justify-between pr-6'>
                               {/* this contains the logo svg */}
                               <div>
@@ -52,7 +52,7 @@ const Hero = () => {
 
                               {/* this contains the links of the nav sections */}
 
-                              <div className='flex items-center gap-[61.5px] pt-[2px] tracking-tight font9 opacity-95  uppercase text-[11px]'>
+                              <div className='flex items-center gap-[61.5px] pt-[2px]tracking-tight font9 opacity-95  uppercase text-[11px]'>
                                              <p>shop</p>
                                              <p>Wholesale</p>
                                              <p className='flex gap-[2px] items-center'>catering <span><BsArrowUpRight className='font-bold text-xs pb-[2px]'/></span></p>
@@ -62,12 +62,12 @@ const Hero = () => {
                                              </div>
                                             <div className='relative'>
                                                 <FiShoppingCart className='text-[15px] opacity-75'/>
-                                                <div className='w-[5px] h-[5px] absolute top-0 -right-[2px] shadow-xl shadow-[#9FF97F] rounded-full bg-[#9FF97F]'></div>
+                                                <div className='w-[5px] h-[5px] absolute top-0 -right-[2px]  rounded-full bg-[#aaf25d]' style={{boxShadow:"0 0 0.5em #00FF19"}}></div>
                                             </div>
                               </div>
                </nav>
                 {/* /this is the section for the big text */}
-               <div className='font10 mt-[103px] uppercase text-[14.4rem] leading-[195px] -tracking-[0.053em]'>
+               <div className='font10 mt-[103px] uppercase text-[14.4rem] leading-[195px] -tracking-[0.053em] '>
                 <p>change</p>
                 <p>the course</p>
                </div>
@@ -80,17 +80,21 @@ const Hero = () => {
 
                 {/* this is the last section after this git push happening and me going to sleep well i'll sleep early today 3am is early but okay only if it is compeleted */}
 
-                <div className='w-full  px-4'>
+                <div className='w-full  px-4 '>
                         <div className='w-full flex flex-col items-center mt-28'>
-                                        <h1 className='text-[3rem] font10 tracking-tighter uppercase'>buy soap, give hope</h1>
+                                        <h1 className='text-[3rem] font10 tracking-tighter uppercase'>buy soap, give hope.</h1>
                                         <p className='text-[11px] border-b-[1px] border-black/30 pb-1  font8 tracking-wide opacity-85 '>EXPLORE OUR WHOLESALE SOAPS THAT INSPIRE WHOLE COMMUNITIES.</p>
                         </div>
                 </div>
 
-                <div className='flex w-full pr-8 justify-between uppercase text-[11px] absolute  font9 items-center bottom-1'>
+    <div className='w-full flex justify-start pl-1'>
+
+                <div className='flex w-[97%]  mx-auto  justify-between uppercase text-[11px]  absolute  font9 border-b-[2px] border-black  items-center bottom-1'>
                 <p>buy good</p>
                 <p>do good</p>
                 </div>
+    </div>
+
     </div>
   )
 }
