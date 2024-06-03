@@ -1,33 +1,14 @@
 import React from 'react'
 import { IoEye } from "react-icons/io5";
 import { FcGoogle } from "react-icons/fc";
-import { FaGithub, FaRegWindowClose } from "react-icons/fa";
+import { FaGithub } from "react-icons/fa";
 import { useFormAction, useNavigate } from 'react-router-dom';
 import {useForm} from "react-hook-form"
-import axios from 'axios';
 
 
-const Register = (data) => {
+const Register = () => {
                const navigate = useNavigate()
-               const {register , handleSubmit} = useForm()
-      const onsubmit = async(data)=>{
-        try{
-          const res = await axios.post("http://localhost:3000/register", data)
-          if(res.status === 200){
-            const token = res.data.token;
-            localStorage.setItem("token", token)
-            alert("success")
-            navigate("/home")
-          }
-          else{
-            localStorage.clear()
-            alert("failure")
-          }
-        }
-        catch(err){
-          alert("something went wrong")
-        }
-      };
+      
 
           
   return (
@@ -39,21 +20,21 @@ const Register = (data) => {
                               {/* the register form section */}
                <div className='form w-full mt-[100px] px-10'>
                               <h1 className='text-lg mb-5 gilb'>Register your Account</h1>
-                              <form onSubmit={handleSubmit(onsubmit)}>
+                              <form action="">
                                              <div className='flex-col w-full flex gap-1 mb-2'>
                                              <label className='text-[11px] gilb'>Username*</label>
-                                             <input {...register("username")} className='w-full text-[13px] outline-none bg-[#F8F8F8] p-2 border-zinc-600/50 rounded-sm border-[1px]' type="text" name="username" placeholder='username' />
+                                             <input className='w-full text-[13px] outline-none bg-[#F8F8F8] p-2 border-zinc-600/50 rounded-sm border-[1px]' type="text" placeholder='username' />
                                              </div>
                                              <div className='flex-col w-full flex gap-1 mb-2'>
                                              <label className='text-[11px] gilb'>E-mail*</label>
-                                             <input {...register("email")} className='w-full outline-none text-[13px] bg-[#F8F8F8] p-2 border-zinc-600/50 rounded-sm border-[1px]' type="email" name="email" placeholder='E-mail' />
+                                             <input className='w-full outline-none text-[13px] bg-[#F8F8F8] p-2 border-zinc-600/50 rounded-sm border-[1px]' type="email" placeholder='E-mail' />
                                              </div>
                                              <div className='flex-col w-full flex gap-1 relative'>
                                              <label className='text-[11px] gilb'>password*</label>
                                              <div className='absolute top-[52%] right-4'>
                                                             <IoEye className='text-xl opacity-60'/>
                                              </div>
-                                             <input {...register("password")} className='w-full text-[13px] outline-none bg-[#F8F8F8] p-2 border-zinc-600/50 rounded-sm border-[1px]' type="password" name="password" placeholder='Password' />
+                                             <input className='w-full text-[13px] outline-none bg-[#F8F8F8] p-2 border-zinc-600/50 rounded-sm border-[1px]' type="password" placeholder='Password' />
                                              </div>
                                              {/* section for the forgot password */}
                                              <div className='w-full flex mt-3 justify-between'>
@@ -70,7 +51,7 @@ const Register = (data) => {
                                                             </div>
                                              </div>
 
-                                             <button type='submit' className='w-full p-1 bg-[#151519] mt-4 text-white'>Create Your Account</button>
+                                             <button onClick={(e)=>e.preventDefault() } className='w-full p-1 bg-[#151519] mt-4 text-white'>Create Your Account</button>
                               </form>
 
                               <div className='w-full border-t-[1px] mt-5 border-black/30'>

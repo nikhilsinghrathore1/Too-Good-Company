@@ -3,7 +3,7 @@ const jwt = require("jsonwebtoken")
 
 function verifyToken(req,res,next){
                const token = req.headers['authorization'].split(" ")[1]
-               console.log(token)
+               // console.log(token)
                if(!token){
                               res.status(400).json({msg:"invalid token"})
                }
@@ -13,6 +13,7 @@ function verifyToken(req,res,next){
                                                             res.status(400).json({msg:"wrong credentials"})
                                              }
                                              else{
+                                                console.log(decode)
                                                             req.user = decode;
                                                          next()
                                              }

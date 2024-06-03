@@ -2,16 +2,14 @@ const express = require("express")
 const cors = require("cors")
 const jwt = require("jsonwebtoken")
 const app = express();
-const StoreRouter = require("./Routes/StoreRouter")
-const verifyToken = require("./Middlewares/jwtValidation")
+const wallet = require("./Model/account")
 const userModel = require("./Model/User")
 app.use(express.json())
+const verifytoken = require("./Middlewares/jwtValidation")
 app.use(cors())
-app.use("/home/store", StoreRouter)
 
 // need to implement the zod validation for the enterance routes
 
-// this toh is the authentication wale routes so lets move it to the auth Router or lets just let it stay here only 
 
 // this is the register route
 app.post("/register",async(req,res)=>{
@@ -26,6 +24,10 @@ app.post("/register",async(req,res)=>{
                               })
                               if(user){
 
+                                             wallet.create({
+                                                            userId:user._id,
+                                                            balance:Math.floor(Math.random()*10000)
+                                             }),
                                              res.status(200).json({msg:"done" , token : token})
                               }
                              else{
@@ -41,12 +43,10 @@ app.post("/register",async(req,res)=>{
 // this is the login route
 app.post("/login", async (req,res)=>{
                const payload = req.body;
-               const email = payload.email;
-               const username = payload.username;
-               const password = payload.password;
+               const email = payload.email
                try{
 
-                              const user = await userModel.findOne({username:username , email:email , password:password})
+                              const user = await userModel.findOne({email})
                               if(user){
                                              const token = jwt.sign(payload , "123")
                                              res.status(200).json({msg:"done" , token : token})
@@ -61,11 +61,13 @@ app.post("/login", async (req,res)=>{
                }
 });
 
-app.post("/home",verifyToken, (req,res)=>{
-              console.log(req.user)
-               res.status(200).send("recieved token")
+app.get("/balance",verifytoken,async(req,res)=>{
+               const payload = req.user ; 
+               const user = await userModel.findOne({username:payload.username})
+               const userid = user._id
+               // console.log(userid);
+             const data = await wallet.findOne({userId:userid})
+             console.log(data);
+             res.status(200).json({msg:`your account has ${data.balance} money`})
 })
-
-
-
 app.listen(3000)
