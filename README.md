@@ -1,4 +1,4 @@
-# eCommerce Platform
+# Too Good Company 
 
 Welcome to the too good company This repository contains the codebase for a full-featured eCommerce web application built with modern web development technologies.
 
